@@ -33,9 +33,10 @@ export interface CharacterDictionary {
  * 游戏关卡配置接口
  */
 export interface LevelConfig {
-  levelNumber: number;
+  grade: '1上' | '1下' | '2上' | '2下';
   gridSize: 16 | 36;   // 4x4=16 或 6x6=36
   timeLimit: number;   // 倒计时限制（秒）
+  isInfiniteTime: boolean; // 是否启用不计时模式；为 true 时忽略 timeLimit
   allowedErrors: number; // 允许的最大错误次数（生命值）
 }
 

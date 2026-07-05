@@ -34,9 +34,10 @@ export interface CharacterDictionary {
  * 单个游戏关卡的固定配置。
  */
 export interface LevelConfig {
-  levelNumber: number;
+  grade: '1上' | '1下' | '2上' | '2下';
   gridSize: 16 | 36;
   timeLimit: number;
+  isInfiniteTime: boolean;
   allowedErrors: number;
 }
 
