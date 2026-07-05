@@ -2,3 +2,12 @@ node_modules/
 dist/
 .DS_Store
 *.log
+
+# Editor metadata
+.vscode/
+.idea/
+
+# Local environment files
+.env
+.env.*
+!.env.example
