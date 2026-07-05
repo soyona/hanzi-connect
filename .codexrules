@@ -1,0 +1,17 @@
+# 智能体最高铁律 (System Absolute Rules)
+
+## 1. 状态同步 (State Synchronization)
+* 每次开始编写代码或执行新任务前，必须完整通读 `memory-bank/` 下的所有文件，重建对项目架构、强类型契约的全局认知。
+
+## 2. 契约对齐 (Contract Alignment)
+* 严禁越界修改任何未在 `activeContext.md` 中提及的源码文件。
+* 编写任何业务逻辑前，必须严格对齐 `dataModels.md` 的强类型。
+
+## 3. 异常熔断 (Failure Circuit Breaker)
+* 一旦在终端运行编译 (`npm run build`)、构建或 Lint 命令连续失败超过 3 次，必须立刻停止（Stop）一切 Act 行为。
+* 禁止盲目猜测与高频试错，必须如实向人类报告日志并挂起会话，等待人类干预。
+
+## 4. 目录隔离 (Directory Segregation)
+* `product-assets/`：只读，禁止高频扫描。
+* `memory-bank/`：高频读写，系统状态控制中枢。
+* `src/`：唯一的纯代码输出目标。
